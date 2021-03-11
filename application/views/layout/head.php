@@ -1,4 +1,3 @@
-
 <!--
 =========================================================
 * Argon Dashboard - v1.2.0
@@ -27,7 +26,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>Sisvent</title>
+  <title>Ferreteria ADB</title>
   <!-- Favicon -->
   <link rel="icon" href="<?php echo base_url(); ?>assets/img/favicon.png" type="image/png">
   <!-- Fonts -->
@@ -43,4 +42,22 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/argon.css?v=1.2.0" type="text/css">
   <!-- App CSS -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/app.css" type="text/css">
+
+  <script src="<?php echo base_url(); ?>assets/vendor/jquery/jquery.min.js"></script>
+  <script src="<?php echo base_url(); ?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?php echo base_url(); ?>assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+  <script src="<?php echo base_url(); ?>assets/vendor/jquery-scroll-lock/jquery-scrollLock.min.js"></script>
+  <!-- Optional JS -->
+  <script src="<?php echo base_url(); ?>assets/vendor/chart.js/Chart.min.js"></script>
+  <!-- Datatable -->
+  <script src="<?php echo base_url(); ?>assets/vendor/datatables.net/jquery.dataTables.min.js"></script>
+  <script src="<?php echo base_url(); ?>assets/vendor/datatables.net-responsive-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <!-- Sweet Alert 2 -->
+  <script src="<?php echo base_url(); ?>assets/vendor/sweetalert2/sweetalert2.min.js"></script>
+  <!-- Argon JS -->
+  <script src="<?php echo base_url(); ?>assets/js/argon.js?v=1.2.0"></script>
+  <script src="<?php echo base_url(); ?>assets/js/jspdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.14/jspdf.plugin.autotable.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.14/index.d.ts"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.14/jspdf.plugin.autotable.js"></script>
 </head>

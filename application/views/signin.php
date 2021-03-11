@@ -17,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>Inicio de sesión</title>
+  <title>Iniciar sesión </title>
   <!-- Favicon -->
   <link rel="icon" href="<?php echo base_url(); ?>assets/img/brand/favicon.png" type="image/png">
   <!-- Fonts -->
@@ -42,18 +42,14 @@
         <div class="header-body text-center mb-7">
           <div class="row justify-content-center">
             <div class="col-xl-5 col-lg-6 col-md-8 px-5">
-              <h1 class="text-white">Ferreteria ADB</h1>
-              <h2 class="text-white">Bienvenido!</h2>
-              <p class="text-lead text-white">Sistema de Ventas</p>
+              <h1 class="text-dark text-fontl">Ferretería ADB</h1>
+              <h2 class="text-dark text-fontl2">Bienvenido!</h2>
+              <p class="text-lead text-dark text-fontl3">Herramientas, para las mejores personas</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="separator separator-bottom separator-skew zindex-100">
-        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
-        </svg>
-      </div>
+     
     </div>
     <!-- Page content -->
     <div class="container mt--8 pb-5">
@@ -79,7 +75,7 @@
                   </div>
                 </div>
                 <div class="text-center">
-                  <button type="sub" class="btn btn-primary my-4">Sign in</button>
+                  <button type="sub" class="btn btn-primary my-4">Ingresar</button>
                 </div>
               </form>
             </div>
@@ -87,9 +83,10 @@
         </div>
       </div>
     </div>
-  </div>
+ 
   <!-- Argon Scripts -->
   <!-- Core -->
+  
   <script src="<?php echo base_url(); ?>assets/vendor/jquery/jquery.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>

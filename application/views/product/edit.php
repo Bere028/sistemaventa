@@ -93,5 +93,36 @@
             </div>
         </div>
 
-       
+        <div class="col-xl-4 order-xl-1">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row align-items-center">
+                        <div class="col-8">
+                            <h3 class="mb-0">Imagen </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+
+                    <div class="form-group">
+                        <label class="form-control-label">Subir Imagen</label>
+                        <div class="custom-file">
+                            <input type="file" name="picture" class="custom-file-input" id="customFileLang">
+                            <label class="custom-file-label" for="customFileLang">Subir Imagen</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="text-center">
+                            <?php if(file_exists("./assets/img/product/".$picture)): ?>
+                                <img id="img-product" src="<?php echo base_url(); ?>assets/img/product/<?php echo $picture; ?>" class="img-full rounded">
+                            <?php else: ?>
+                                <img id="img-product" src="<?php echo base_url(); ?>assets/img/product/img.png" class="img-full rounded">
+                            <?php endif ?>    
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>

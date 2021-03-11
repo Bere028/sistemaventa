@@ -4,16 +4,16 @@
     <div class="header-body">
         <div class="row align-items-center py-4">
         <div class="col-lg-6 col-7">
-            <h6 class="h2 text-white d-inline-block mb-0">Usuarios</h6>
+            <h6 class="h2 text-white d-inline-block mb-0">Ventas</h6>
             <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
             <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                 <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>"><i class="fas fa-home"></i></a></li>
-                <li class="breadcrumb-item active">Usuarios</a></li>
+                <li class="breadcrumb-item active">Ventas</a></li>
             </ol>
             </nav>
         </div>
         <div class="col-lg-6 col-5 text-right">
-            <a href="<?php echo base_url(); ?>nuevo-usuario" class="btn btn-sm btn-neutral">Nuevo</a>
+            <a href="<?php echo base_url(); ?>nuevo-venta" class="btn btn-sm btn-neutral">Nuevo</a>
         </div>
         </div>
     </div>
@@ -31,14 +31,14 @@
             </div>
             <!-- Light table -->
             <div class="table-responsive">
-              <table id="userTable" class="table align-items-center table-flush">
+              <table id="saleTable" class="table align-items-center table-flush">
                 <thead class="thead-light">
                   <tr>
                     <th scope="col" class="sort">N°</th>
-                    <th scope="col" class="sort">Nombre</th>
-                    <th scope="col" class="sort">Email</th>
-                    <th scope="col" class="sort">N° Celular</th>
-                    <th scope="col" class="sort">Rol</th>
+                    <th scope="col" class="sort">Cliente</th>
+                    <th scope="col" class="sort">Fecha</th>
+                    <th scope="col" class="sort">Total</th>
+                    <th scope="col" class="sort">Comprovante</th>
                     <th scope="col"></th>
                   </tr>
                 </thead>
@@ -54,34 +54,28 @@
                       </td>
                       <td>
                         <span class="badge badge-dot mr-4">
-                          <span class="status"><?php echo $value->name; ?></span>
+                          <span class="status"><?php echo $value->client; ?></span>
                         </span>
                       </td>
                       <td>
                         <span class="badge badge-dot mr-4">
-                          <span class="status"><?php echo $value->email; ?></span>
+                          <span class="status"><?php echo strftime("%d de %B  de %Y", strtotime("$value->date"));?></span>
                         </span>
                       </td>
                       <td>
                         <span class="badge badge-dot mr-4">
-                          <span class="status"><?php echo $value->phone_number; ?></span>
+                          <span class="status"><?php echo $value->total; ?></span>
                         </span>
                       </td>
                       <td>
                         <span class="badge badge-dot mr-4">
-                          <span class="status"><?php echo $value->rol; ?></span>
+                          <span class="status"><?php echo $value->voucher; ?></span>
                         </span>
                       </td>
                       <td class="text-right">
-                        <div class="dropdown">
-                          <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-v"></i>
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                            <a class="dropdown-item" href="<?php echo base_url()."usuario/".$value->id; ?>">Editar</a>
-                            <a class="dropdown-item" href="<?php echo base_url()."usuario/delete/".$value->id; ?>">Elimnar</a>
-                          </div>
-                        </div>
+                        <a href="<?php echo base_url(); ?>ventas/<?php echo $value->id; ?>" class="btn btn-icon btn-default" type="button">
+                          <span class="btn-inner--icon"><i class="ni ni-laptop"></i></span>
+                        </a>
                       </td>
                     </tr>
                     <?php endforeach; ?>

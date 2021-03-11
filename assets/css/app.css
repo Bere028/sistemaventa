@@ -113,3 +113,55 @@ li.ui-menu-item:hover {
     width: 140px !important;
     object-fit: cover !important;
 }
+.bg-default {
+background-image:url("/sistemaventas/assets/img/fondo.jpg");
+height: 100%;
+background-position:center;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+.text-fontl{
+    font-family: "Homer Simpson UI";
+    font-size: 40pt;
+    font-weight: 900;
+}
+.text-fontl2{
+    font-family: "Homer Simpson UI";
+    font-size:20pt;
+}
+.text-fontl3{
+    font-family: "Homer Simpson UI";
+    font-size:15pt;
+    font-weight: 900;
+}
+.text-fontl4{
+    font-family: "Homer Simpson UI";
+    font-size:12pt;
+    font-weight: 900;
+}
+.text-fontl5{
+    font-family: "Homer Simpson UI";
+    font-size:12pt;
+    font-weight: 900;
+}
+.text-fontl6{
+    font-family: "Homer Simpson UI";
+    font-size:12pt;
+    font-weight: 900;
+}
+.text-fontl7{
+    font-family: "Homer Simpson UI";
+    font-size:12pt;
+    font-weight: 900;
+}
+.text-fontl8{
+    font-family: "Homer Simpson UI";
+    font-size:12pt;
+    font-weight: 900;
+}
+.text-fontl9{
+    font-family: "Homer Simpson UI";
+    font-size:12pt;
+    font-weight: 900;
+}

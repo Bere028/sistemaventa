@@ -25,4 +25,15 @@ class Dashboard extends CI_Controller {
         $this->load->view('layout/footer');
         $this->load->view('layout/js/dashboard');
     }
+
+    public function getSalesYear(){
+        $year = $this->input->post("year");
+        $resp = $this->Dashboard_model->getSalesYear($year);
+        echo json_encode($resp);
+    }
+    
+    public function getSalesWeek(){
+        $resp = $this->Dashboard_model->getSalesWeek();
+        echo json_encode($resp);
+    }
 }

@@ -2,13 +2,13 @@
     
     <div class="header header-profile pb-6 d-flex align-items-center">
       <!-- Mask -->
-      <span class="mask bg-gradient-default opacity-8"></span>
+      <span class="mask bg-gradient-default opacity-6"></span>
       <!-- Header container -->
       <div class="container-fluid d-flex align-items-center">
         <div class="row">
           <div class="col-lg-7 col-md-10">
             <h1 class="display-2 text-white">Hola <?php echo $this->session->userdata("name"); ?></h1>
-            <p class="text-white mt-0 mb-5">Esta es tu página de perfil. Puede ver el progreso que ha logrado con su trabajo y administrar sus proyectos o tareas asignadas</p>
+            <p class="text-white mt-0 mb-5">Esta es tu página de perfil. Puede ver el progreso que ha logrado con su trabajo y administrar sus proyectos o tareas asignadas</h2>
           </div>
         </div>
       </div>

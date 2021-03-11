@@ -1,5 +1,5 @@
 <!-- Header -->
-<div class="header bg-primary pb-6">
+<div class="header bg-gray pb-6">
     <div class="container-fluid">
     <div class="header-body">
         <div class="row align-items-center py-4">
@@ -67,7 +67,7 @@
                           </a>
                           <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                             <a class="dropdown-item" href="<?php echo base_url()."categoria/".$value->id; ?>">Editar</a>
-                            <a class="dropdown-item" href="<?php echo base_url()."categoria/delete/".$value->id; ?>">Eliminar</a>
+                            <a class="dropdown-item" href="<?php echo base_url()."categoria/delete/".$value->id; ?>">Elimnar</a>
                           </div>
                         </div>
                       </td>

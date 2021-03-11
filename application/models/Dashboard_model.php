@@ -17,7 +17,17 @@ class Dashboard_model extends CI_Model {
             "cant_user"=>$user
         );
     }
-
+    
+    public function getSalesYear($year){
+        $this->db->select("MONTH(s.date) as month, SUM(s.total) as data");
+		$this->db->from("sale s");
+		$this->db->where("s.date >=",$year."-01-01");
+		$this->db->where("s.date <=",$year."-12-31");
+		$this->db->group_by("month");
+		$this->db->order_by("month");
+		$results = $this->db->get();
+		return $results ->result();
+    }
 
     public function getYears(){
 		$this->db->select("YEAR(s.date) as year");
@@ -26,6 +36,11 @@ class Dashboard_model extends CI_Model {
 		$this->db->order_by("year","desc");
 		$results = $this->db->get();
 		return $results->result();
+    }
+    
+    public function getSalesWeek(){
+        $results = $this->db->query("SELECT DAYOFWEEK(sale.date) as day, SUM(sale.total) as data FROM `sale` WHERE YEARWEEK(sale.date) = YEARWEEK(CURDATE()) GROUP BY day ORDER BY day");
+		return $results ->result();
     }
 
 }

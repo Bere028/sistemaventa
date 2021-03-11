@@ -98,7 +98,7 @@
             </div>
         </div>
 
-        <!-- <div class="col-xl-4 order-xl-1">
+        <div class="col-xl-4 order-xl-1">
             <div class="card">
                 <div class="card-header">
                     <div class="row align-items-center">
@@ -119,12 +119,16 @@
 
                     <div class="form-group">
                         <div class="text-center">
-                            
+                            <?php if(file_exists("./assets/img/product/img".$this->session->userdata("idProduct").".png")): ?>
+                            <img id="img-product" src="<?php echo base_url(); ?>assets/img/product/img<?php echo $this->session->userdata("idProduct").".png"; ?>" class="img-full rounded">
+                            <?php else: ?>
+                                <img id="img-product" src="<?php echo base_url(); ?>assets/img/product/img.png" class="img-full rounded">
+                            <?php endif ?>
                         </div>
                     </div>
 
                 </div>
             </div>
-        </div> -->
+        </div>
 
-    </div> 
+    </div>

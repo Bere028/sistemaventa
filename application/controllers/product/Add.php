@@ -36,7 +36,7 @@ class Add extends CI_Controller {
         $stock = $this->input->post("stock");
         $categoryId = $this->input->post("categoryId");
         $id    = $this->session->userdata("idProduct");
-		
+		$picture   ="img".$id.".png";
 
         $this->form_validation->set_rules("barcode","Codigó de barras","required|numeric|is_unique[product.barcode]");
         $this->form_validation->set_rules("name","Nombre","required");
@@ -54,7 +54,7 @@ class Add extends CI_Controller {
                 'description' => $description,
                 'price' => $price,
                 'stock' => $stock,
-                
+                'picture' => $picture,
                 'category_id' => $categoryId
 			);
 
@@ -73,7 +73,28 @@ class Add extends CI_Controller {
     }
     
 
-  
+	public function upload(){
+        
+        $id    = $this->session->userdata("idProduct");
+		$picture ="img".$id.".png";
 
-	
+		$config['upload_path'] 		 = './assets/img/product';
+		$config['allowed_types'] = 'jpg|png';
+		$config['overwrite']   = true;
+		$config['file_name']  = $picture;
+
+		$this->load->library('upload', $config);
+
+		if (!$this->upload->do_upload('picture')) {
+
+			$resp= array('type' => "error", 'message' => substr($this->upload->display_errors(), 3, -4));
+
+		} else {
+            $this->upload->data();
+			$resp= array('type' => "success", 'message' => "La imagen se subió correctamente");
+		}
+
+		echo json_encode($resp);
+
+	}
 }
